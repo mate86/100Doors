@@ -16,10 +16,21 @@ def ToogleDoor(doors):
             else:
                 doors[i] = 0
         step += 1
-    print(doors)
+    return doors
+    #print(doors)
+
+def CountOpenDoors(doors):
+    OpenDoors = []
+    for i in range(len(doors)):
+        if doors[i] == 1:
+            OpenDoors.append(i)
+    print("The following doors are open: ")
+    for i in range(len(OpenDoors)):
+        print(OpenDoors[i])
+
 
 
 # ========== Main ==========
 
 #Initialization()
-ToogleDoor(Initialization())
+CountOpenDoors(ToogleDoor(Initialization()))
